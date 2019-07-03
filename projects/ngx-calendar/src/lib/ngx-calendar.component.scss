@@ -1,0 +1,203 @@
+// Fonts:
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+// Variables:
+
+$primary-color: #e53935;
+
+// Styles:
+
+.c-calendar {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.c-calendar .c-calendar-right {
+    text-align: right;
+}
+
+.c-calendar .c-calendar-middle {
+    margin: 0 8px;
+}
+
+.c-calendar .c-calendar-arrow {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.c-calendar .c-calendar-arrow.c-calendar-arrow-disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.c-calendar .c-calendar-week {
+    display: flex;
+}
+
+.c-calendar .c-calendar-week .c-calendar-left,
+.c-calendar .c-calendar-week .c-calendar-right {
+    width: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.c-calendar .c-calendar-week .c-calendar-middle {
+    width: calc(100% - 50px);
+}
+
+.c-calendar .c-calendar-week .c-calendar-right {
+    justify-content: flex-end;
+}
+
+.c-calendar .c-calendar-week .c-calendar-arrow {
+    width: 25px;
+    height: 25px;
+    background-color: $primary-color;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header {
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: $primary-color;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    color: white;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-body {
+    display: flex;
+    padding: 8px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    border-right: 2px solid white;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item.c-calendar-week-item-actionable {
+    border-bottom: 2px solid transparent;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item:hover,
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item.c-calendar-week-item-active {
+    border-bottom-color: white;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item:last-child {
+    border-right: none;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item .c-calendar-week-date .c-calendar-week-date-name {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-header .c-calendar-week-item .c-calendar-week-date .c-calendar-week-date-date {
+    font-size: 16px;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-body .c-calendar-week-item {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-body .c-calendar-week-item .c-calendar-week-time .c-calendar-week-time-time {
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.c-calendar .c-calendar-week .c-calendar-week-body .c-calendar-week-item .c-calendar-week-time .c-calendar-week-time-time:hover,
+.c-calendar .c-calendar-week .c-calendar-week-body .c-calendar-week-item .c-calendar-week-time .c-calendar-week-time-time.c-calendar-week-time-time-active {
+    border-color: $primary-color;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-1 {
+    display: flex;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: $primary-color;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    color: white;
+    justify-content: space-between;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-1 .c-calendar-month-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 {
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-header {
+    display: flex;
+    margin-bottom: 8px;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 8px;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-header .c-calendar-month-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-header .c-calendar-month-item .c-calendar-month-date {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row .c-calendar-month-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row .c-calendar-month-column {
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 3px;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row .c-calendar-month-item:hover .c-calendar-month-column,
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row .c-calendar-month-column.c-calendar-month-column-active {
+    border-color: $primary-color;
+}
+
+.c-calendar .c-calendar-month .c-calendar-month-2 .c-calendar-month-body .c-calendar-month-row .c-calendar-month-column.c-calendar-month-column-has-event {
+    color: $primary-color;
+}

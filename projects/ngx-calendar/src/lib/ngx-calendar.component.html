@@ -1,0 +1,58 @@
+<div class="c-calendar">
+    <div *ngIf="isMonthView()">
+        <div class="c-calendar-month">
+            <div class="c-calendar-month-1">
+                <div class="c-calendar-left">
+                    <div class="c-calendar-arrow" (click)="prevMonth()"><</div>
+                </div>
+                <div class="c-calendar-middle">
+                    <div class="c-calendar-month-header">{{calendar.data.formattedDate}}</div>
+                </div>
+                <div class="c-calendar-right">
+                    <div class="c-calendar-arrow" (click)="nextMonth()">></div>
+                </div>
+            </div>
+            <div class="c-calendar-month-2">
+                <div class="c-calendar-month-header">
+                    <div *ngFor="let c of calendar.data.columns" class="c-calendar-month-item">
+                        <div class="c-calendar-month-date">{{c}}</div>
+                    </div>
+                </div>
+                <div class="c-calendar-month-body">
+                    <div class="c-calendar-month-row" *ngFor="let r of calendar.data.rows">
+                        <div (click)="chooseDate(c.date)" class="c-calendar-month-item" *ngFor="let c of r.columns">
+                            <span class="c-calendar-month-column" [ngClass]="{'c-calendar-month-column-active': isSameDate(c.date, calendar.chosenDate), 'c-calendar-month-column-has-event': hasEvent(c.date)}">{{c.formattedDate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isWeekView()">
+        <div class="c-calendar-week">
+            <div class="c-calendar-left">
+                <div class="c-calendar-arrow" (click)="prevWeek()" [ngClass]="{'c-calendar-arrow-disabled': isPrevDisabled()}"><</div>
+            </div>
+            <div class="c-calendar-middle">
+                <div class="c-calendar-week-header">
+                    <div (click)="!calendar.options.isWithTime && chooseDate(c.date)" *ngFor="let c of calendar.data.columns" class="c-calendar-week-item" [ngClass]="{'c-calendar-week-item-actionable': !calendar.options.isWithTime, 'c-calendar-week-item-active': isSameDate(c.date, calendar.chosenDate)}">
+                        <div class="c-calendar-week-date">
+                            <div class="c-calendar-week-date-name">{{c.dayName}}</div>
+                            <div class="c-calendar-week-date-date">{{c.formattedDate}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="calendar.options.isWithTime" class="c-calendar-week-body">
+                    <div *ngFor="let c of calendar.data.columns" class="c-calendar-week-item">
+                        <div class="c-calendar-week-time">
+                            <div *ngFor="let r of c.rows" (click)="chooseDate(r.date)" class="c-calendar-week-time-time" [ngClass]="{'c-calendar-week-time-time-active': isSameDateTime(r.date, calendar.chosenDate)}">{{r.formattedDate}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-calendar-right">
+                <div class="c-calendar-arrow" (click)="nextWeek()" [ngClass]="{'c-calendar-arrow-disabled': isNextDisabled()}">></div>
+            </div>
+        </div>
+    </div>
+</div>

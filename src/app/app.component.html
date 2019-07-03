@@ -1,0 +1,69 @@
+<div class="container">
+	<h2>
+		Demo for <b><a target="_blank" href="https://github.com/Shad1ks/ngx-calendar">ngx-calendar</a></b>
+	</h2>
+	<hr />
+	<h3>Month:</h3>
+	<label>Value (To choose date click on day.):</label>
+	<p>
+		<code>
+			{{calendarValue | date:'full'}}
+		</code>
+	</p>
+	<p style="max-width: 500px">
+		<ngx-calendar #ngxCalendar1 [options]="calendarOptions" (onChooseDate)="onChooseDate($event)"></ngx-calendar>
+	</p>
+	<label>Data:</label>
+	<p>
+		<code>
+			calendarOptions = {{calendarOptions | json}};
+		</code>
+	</p>
+	<label>Code:</label>
+	<p>
+		<code>
+			&lt;ngx-calendar #ngxCalendar1 [options]="calendarOptions" (onChooseDate)="onChooseDate($event)"&gt;&lt;/ngx-calendar&gt;
+		</code>
+	</p>
+	<div style="margin-top: 50px"></div>
+	<h3>Week (No time.):</h3>
+	<label>Value (To change range click on arrows.):</label>
+	<p>
+		<code>
+			{{calendarRange?.fromDate | date:'full'}} - {{calendarRange?.toDate | date:'full'}}
+		</code>
+	</p>
+	<p style="max-width: 500px">
+		<ngx-calendar [options]="calendarOptions2" (onChangeDate)="onChangeDate($event)"></ngx-calendar>
+	</p>
+	<label>Data:</label>
+	<p>
+		<code>
+			calendarOptions2 = {{calendarOptions2 | json}};
+		</code>
+	</p>
+	<label>Code:</label>
+	<p>
+		<code>
+			&lt;ngx-calendar [options]="calendarOptions2" (onChangeDate)="onChangeDate($event)"&gt;&lt;/ngx-calendar&gt;
+		</code>
+	</p>
+	<div style="margin-top: 50px"></div>
+	<h3>Week (With time.):</h3>
+	<p style="max-width: 500px">
+		<ngx-calendar [options]="calendarOptions3"></ngx-calendar>
+	</p>
+	<label>Data:</label>
+	<p>
+		<code>
+			calendarOptions3 = {{calendarOptions3 | json}};
+		</code>
+	</p>
+	<label>Code:</label>
+	<p>
+		<code>
+			&lt;ngx-calendar [options]="calendarOptions3"&gt;&lt;/ngx-calendar&gt;
+		</code>
+	</p>
+	<div style="margin-top: 50px"></div>
+</div>
