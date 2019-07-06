@@ -1,7 +1,7 @@
 {
 	"name": "ss-ngx-calendar",
 	"description": "Calendar component for Angular.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"main": "./src/lib/ngx-calendar.component.ts",
 	"repository": {
 		"type": "git",

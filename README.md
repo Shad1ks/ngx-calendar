@@ -27,7 +27,7 @@ npm install ss-ngx-calendar
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { NgxCalendarModule } from "ngx-calendar";
+import { NgxCalendarModule } from "ss-ngx-calendar";
 
 @NgModule({
   imports: [
@@ -141,7 +141,7 @@ onChooseDate(date: any) {
 - **Change view**<br>Use to change view after load.
 
 ```javascript
-import { NgxCalendarComponent } from "ngx-calendar";
+import { NgxCalendarComponent } from "ss-ngx-calendar";
 
 @ViewChild("ngxCalendar") ngxCalendar: NgxCalendarComponent;
 
@@ -163,7 +163,7 @@ ngAfterViewInit() {
 - **Refresh**<br>Use to reload options in case of change.
 
 ```javascript
-import { NgxCalendarComponent } from "ngx-calendar";
+import { NgxCalendarComponent } from "ss-ngx-calendar";
 
 @ViewChild("ngxCalendar") ngxCalendar: NgxCalendarComponent;
 
