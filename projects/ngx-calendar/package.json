@@ -1,26 +1,26 @@
 {
-  "name": "ss-ngx-calendar",
-  "description": "Calendar component for Angular.",
-  "version": "1.0.0",
-  "main": "./src/lib/ngx-calendar.component.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Shad1ks/ngx-calendar.git"
-  },
-  "peerDependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0",
-    "moment": "^2.3.0"
-  },
-  "keywords": [
-    "calendar",
-    "moment",
-    "angular"
-  ],
-  "author": "Igor Karpov <shad1ksen@gmail.com> (http://github.com/Shad1ks)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Shad1ks/ngx-calendar/issues"
-  },
-  "homepage": "https://github.com/Shad1ks/ngx-calendar"
+	"name": "ss-ngx-calendar",
+	"description": "Calendar component for Angular.",
+	"version": "1.0.1",
+	"main": "./src/lib/ngx-calendar.component.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Shad1ks/ngx-calendar.git"
+	},
+	"peerDependencies": {
+		"@angular/common": "^6.0.0",
+		"@angular/core": "^6.0.0",
+		"moment": "^2.15.0"
+	},
+	"keywords": [
+		"calendar",
+		"moment",
+		"angular"
+	],
+	"author": "Igor Karpov <shad1ksen@gmail.com> (http://github.com/Shad1ks)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Shad1ks/ngx-calendar/issues"
+	},
+	"homepage": "https://github.com/Shad1ks/ngx-calendar"
 }

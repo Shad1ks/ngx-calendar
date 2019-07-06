@@ -4,7 +4,8 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build"
+        "build": "ng build",
+        "build:lib": "ng build ngx-calendar && copy README.md dist\\ngx-calendar && copy LICENSE dist\\ngx-calendar"
     },
     "private": true,
     "dependencies": {
