@@ -24,8 +24,9 @@ export class NgxCalendarComponent implements OnInit {
 	calendar: any = {
 		options: {},
 
+		/*delete default hourInterval for generate error when interval only seconds*/
 		defaults: {
-			hourInterval: 1,
+			hourInterval: 0,
 			minuteInterval: 0,
 
 			fromHour: 0,
@@ -50,11 +51,13 @@ export class NgxCalendarComponent implements OnInit {
 			this.calendar.options.fromDate = moment();
 		}
 
+		/*Comment this block because this cause error when set hourInterva '0'*/
+		/*
 		if (!this.calendar.options.hourInterval || !this.calendar.options.minuteInterval ||
 			(this.calendar.options.hourInterval <= 0 && this.calendar.options.minuteInterval <= 0)) {
 			this.calendar.options.hourInterval = this.calendar.defaults.hourInterval;
 			this.calendar.options.minuteInterval = this.calendar.defaults.minuteInterval;
-		}
+		}*/
 	}
 
 	refresh() {
